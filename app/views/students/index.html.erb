@@ -1,5 +1,11 @@
 <div>
+<ul>
+ <h1>
   <% @students.each do |student| %>
-    <div><%= student.first_name + " " + student.last_name %></div>
+  <li>                                                     <!--- basically show_path is saying, hey, refer to def show then send in param of :id --->
+<%= link_to student.to_s,  student_path(student) %> 
+</li>
   <% end %>
+</h1>
+</ul>
 </div>
